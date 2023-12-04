@@ -20,3 +20,10 @@ autocmd({ "BufReadPost" }, {
 		vim.api.nvim_exec('silent! normal! g`"zv', false)
 	end,
 })
+
+vim.cmd('autocmd BufNewFile,BufRead *.make set filetype=make')
+vim.cmd('autocmd BufNewFile,BufRead *.pc set filetype=c')
+
+-- open Telescope when no file is specified
+
+vim.cmd('autocmd VimEnter * if argc() == 0 | Telescope find_files')

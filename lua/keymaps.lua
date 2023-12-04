@@ -25,7 +25,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- New tab
-keymap("n", "te", ":tabedit", opts)
+keymap("n", "te", ":tabedit<Return>", opts)
 -- 新しいタブを一番右に作る
 keymap("n", "gn", ":tabnew<Return>", opts)
 -- move tab
@@ -66,7 +66,7 @@ keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 -- コンマの後に自動的にスペースを挿入
-keymap("i", ",", ",<Space>", opts)
+-- keymap("i", ",", ",<Space>", opts)
 
 -- Visual --
 -- Stay in indent mode

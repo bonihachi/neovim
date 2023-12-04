@@ -48,6 +48,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use({ "EdenEast/nightfox.nvim" }) -- Color scheme
   use({ "folke/tokyonight.nvim" })
+  use({ "AlexvZyl/nordic.nvim" })
 
   use({ "nvim-lualine/lualine.nvim" }) -- Statusline
   use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
@@ -80,25 +81,18 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope.nvim" })
 
   -- Treesitter
-  use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
+  use({ "nvim-treesitter/nvim-treesitter" })
   use({ "nvim-telescope/telescope-file-browser.nvim" })
-  use({ "mrjones2014/nvim-ts-rainbow" })
+ -- use({ "mrjones2014/nvim-ts-rainbow" })
 
   -- VSCode like にする
   use "lukas-reineke/indent-blankline.nvim"
 
-  use({ "windwp/nvim-ts-autotag" })
+  -- use({ "windwp/nvim-ts-autotag" })
 
-  use {
-    "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  }
+  use "nvim-tree/nvim-tree.lua"
+
+  use "vim-denops/denops.vim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
